@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreDashboard_ExportAllItems", "AspNetCoreDashboard_ExportAllItems\AspNetCoreDashboard_ExportAllItems.csproj", "{464C2F7A-57E8-47F8-A5AB-5597BF95F9B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{464C2F7A-57E8-47F8-A5AB-5597BF95F9B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{464C2F7A-57E8-47F8-A5AB-5597BF95F9B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{464C2F7A-57E8-47F8-A5AB-5597BF95F9B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{464C2F7A-57E8-47F8-A5AB-5597BF95F9B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1AEA844-5A09-4C75-B205-003D40C2E560}
+	EndGlobalSection
+EndGlobal
