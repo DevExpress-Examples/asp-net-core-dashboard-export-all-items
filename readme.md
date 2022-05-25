@@ -1,0 +1,31 @@
+# Dashboard for ASP.NET Core - How to export all dashboard items into the same PDF document
+
+This example shows how to add a custom "Export to PDF" button that exports all dashboard items into the same PDF document.
+
+## Client
+
+The custom export button is displayed in the [Dashboard Title](https://docs.devexpress.com/Dashboard/117383/web-dashboard/ui-elements-and-customization/ui-elements/dashboard-title) toolbar by handling the [ViewerApiExtensionOptions.onDashboardTitleToolbarUpdated](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.ViewerApiExtensionOptions#js_devexpress_dashboard_viewerapiextensionoptions_ondashboardtitletoolbarupdated) event. This functionality is encapsulated into a custom [Dashboard Extension](https://docs.devexpress.com/Dashboard/117543/web-dashboard/ui-elements-and-customization/extensions-overview).
+
+The export operation is executed by sending a GET request to a custom Controller at the back end level.
+
+## Server
+
+The custom Export Controller processes requests from the client side. It uses the [WebDashboardExporter](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.WebDashboardExporter) class to export dashboard items to PDF and [PdfDocumentProcessor](https://docs.devexpress.com/OfficeFileAPI/DevExpress.Pdf.PdfDocumentProcessor) class to join exported documents together.
+
+## Files to Look At
+* [ExportAllItemsExtension.js](CS/AspNetCoreDashboard_ExportAllItems/wwwroot/js/ExportAllItemsExtension.js)
+* [Startup.cs](./CS/AspNetCoreDashboard_ExportAllItems/Startup.cs)
+* [CustomDashboardStorage.cs](./CS/AspNetCoreDashboard_ExportAllItems/Classes/CustomDashboardStorage.cs)
+* [ExportController.cs](./CS/AspNetCoreDashboard_ExportAllItems/Controllers/ExportController.cs)
+* [DashboardExportModel.cs](./CS/AspNetCoreDashboard_ExportAllItems/Models/DashboardExportModel.cs)
+* [_Layout.cshtml](./CS/AspNetCoreDashboard_ExportAllItems/Pages/_Layout.cshtml)
+* [Index.cshtml](./CS/AspNetCoreDashboard_ExportAllItems/Pages/Index.cshtml)
+
+## Documentation
+
+- [Manage Exporting Capabilities](https://docs.devexpress.com/Dashboard/400355/web-dashboard/aspnet-core-dashboard-control/manage-exporting-capabilities)
+
+## More Examples
+
+- [Dashboard for ASP.NET Core - How to load and save dashboards from/to a database](https://github.com/DevExpress-Examples/asp-net-core-dashboard-save-dashboards-to-database)
+- [Dashboard for MVC - How to implement server-side export](https://github.com/DevExpress-Examples/aspnet-mvc-dashboard-how-to-implement-server-side-export-t590027)
