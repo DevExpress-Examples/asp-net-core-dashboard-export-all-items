@@ -4,13 +4,16 @@ This example shows how to add a custom "Export to PDF" button that exports all d
 
 ## Client
 
-The custom export button is displayed in the [Dashboard Title](https://docs.devexpress.com/Dashboard/117383/web-dashboard/ui-elements-and-customization/ui-elements/dashboard-title) toolbar by handling the [ViewerApiExtensionOptions.onDashboardTitleToolbarUpdated](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.ViewerApiExtensionOptions#js_devexpress_dashboard_viewerapiextensionoptions_ondashboardtitletoolbarupdated) event. This functionality is encapsulated into a custom [Dashboard Extension](https://docs.devexpress.com/Dashboard/117543/web-dashboard/ui-elements-and-customization/extensions-overview).
+On the client, the [ViewerApiExtensionOptions.onDashboardTitleToolbarUpdated](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.ViewerApiExtensionOptions#js_devexpress_dashboard_viewerapiextensionoptions_ondashboardtitletoolbarupdated) event is handled to modify the [dashboard title](https://docs.devexpress.com/Dashboard/117383/web-dashboard/ui-elements-and-customization/ui-elements/dashboard-title) and add the custom export button in it. This functionality is encapsulated into a custom [dashboard extension](https://docs.devexpress.com/Dashboard/117543/web-dashboard/ui-elements-and-customization/extensions-overview) (the [ExportAllItemsExtension.js](/CS/AspNetCoreDashboard_ExportAllItems/wwwroot/js/ExportAllItemsExtension.js) file).
 
-The export operation is executed by sending a GET request to a custom Controller at the back end level.
+To perform the export operation, the client sends a GET request to a custom Export Controller.
 
 ## Server
 
-The custom Export Controller processes requests from the client side. It uses the [WebDashboardExporter](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.WebDashboardExporter) class to export dashboard items to PDF and [PdfDocumentProcessor](https://docs.devexpress.com/OfficeFileAPI/DevExpress.Pdf.PdfDocumentProcessor) class to join exported documents together.
+The custom Export Controller processes requests from the client side. This controller uses the following classes:
+
+- The [WebDashboardExporter](https://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.WebDashboardExporter) class exports dashboard items to PDF.
+- The [PdfDocumentProcessor](https://docs.devexpress.com/OfficeFileAPI/DevExpress.Pdf.PdfDocumentProcessor) class joins exported documents together.
 
 ## Files to Look At
 * [ExportAllItemsExtension.js](CS/AspNetCoreDashboard_ExportAllItems/wwwroot/js/ExportAllItemsExtension.js)
