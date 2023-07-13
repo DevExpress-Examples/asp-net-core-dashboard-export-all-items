@@ -1,4 +1,4 @@
-﻿using AspNetCoreDashboard_ExportAllItems.Classes;
+using AspNetCoreDashboard_ExportAllItems.Classes;
 using AspNetCoreDashboard_ExportAllItems.Models;
 using DevExpress.DashboardAspNetCore;
 using DevExpress.DashboardCommon;
