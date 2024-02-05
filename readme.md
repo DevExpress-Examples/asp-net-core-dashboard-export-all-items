@@ -3,7 +3,7 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1091839)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-# Dashboard for ASP.NET Core - How to export all dashboard items into the same PDF document
+# BI Dashboard for ASP.NET Core - How to export all dashboard items into the same PDF document
 
 This example shows how to add a custom **Export to PDF** button that exports all dashboard items into the same PDF document.
 
