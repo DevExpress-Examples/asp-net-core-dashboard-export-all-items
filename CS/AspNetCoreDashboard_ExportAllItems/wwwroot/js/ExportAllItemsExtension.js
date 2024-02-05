@@ -28,13 +28,13 @@
         _exportRoute = exportRoute;
 
         this.start = function () {
-            var viewerApiExtension = _dashboardControl.findExtension('viewer-api');
+            var viewerApiExtension = _dashboardControl.findExtension('viewerApi');
             if (viewerApiExtension) {
                 viewerApiExtension.on('dashboardTitleToolbarUpdated', customizeTitleToolbar);
             }
         };
         this.stop = function () {
-            var viewerApiExtension = _dashboardControl.findExtension('viewer-api');
+            var viewerApiExtension = _dashboardControl.findExtension('viewerApi');
             if (viewerApiExtension) {
                 viewerApiExtension.off('itemCaptionToolbarUpdated', customizeTitleToolbar);
             }
